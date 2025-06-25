@@ -114,9 +114,15 @@ export default function Home() {
           <div className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">Sign in to use the calculator</div>
           <button
             onClick={() => signIn("google")}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded text-lg font-semibold shadow"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded text-lg font-semibold shadow mb-3"
           >
             Sign in with Google
+          </button>
+          <button
+            onClick={() => signIn("github")}
+            className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-2 rounded text-lg font-semibold shadow"
+          >
+            Sign in with GitHub
           </button>
         </div>
       </div>
