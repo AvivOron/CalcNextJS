@@ -13,6 +13,13 @@ const handler = NextAuth({
       clientSecret: process.env.GITHUB_CLIENT_SECRET || "YOUR_GITHUB_CLIENT_SECRET",
     }),
   ],
+  events: {
+    async signIn({ user }) {
+      if (user?.email) {
+        console.log(`User signed in: ${user.email}`);
+      }
+    },
+  },
 });
 
 export { handler as GET, handler as POST }; 
